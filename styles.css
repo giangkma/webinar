@@ -1,5 +1,267 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   font-family: "Quicksand", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+/* common css */
+.bold {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+/* video header */
+video {
+  width: 100%;
+}
+
+/* section one */
+.section__one {
+  padding: 4rem 0rem 2rem 0;
+}
+.section__one__title {
+  text-align: center;
+}
+.section__one__title > h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.808);
+}
+.section__one__title > h3 {
+  font-size: 2.8rem;
+  color: rgba(0, 0, 0, 0.509);
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.section__one__form {
+  padding: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.section__one__form .header {
+  display: flex;
+  justify-content: space-around;
+}
+.section__one__form .icon {
+  display: flex;
+  position: relative;
+  padding-right: 2rem;
+  align-items: center;
+  margin-right: 1rem;
+}
+.section__one__form .calendar {
+  object-fit: cover;
+  width: 16rem;
+  height: 12rem;
+}
+.section__one__form .clock {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.section__one__form .form__right {
+  flex: 1;
+}
+.section__one__form .time {
+  border-left: 1px solid rgb(31, 31, 31);
+  padding-left: 2rem;
+}
+.section__one__form .time h3 {
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.797);
+  font-weight: 600;
+}
+.section__one__form .time h2 {
+  font-size: 7rem;
+  letter-spacing: 3rem;
+  color: rgba(1, 1, 1, 0.639);
+  font-weight: 600;
+}
+.section__one__form .time h4 {
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  color: rgba(1, 1, 1, 0.399);
+  font-weight: 600;
+}
+.section__one__form .description {
+  margin-top: 5rem;
+  text-align: center;
+}
+.section__one__form .description h3 {
+  font-size: 3.1rem;
+  color: rgba(1, 1, 1, 0.541);
+  font-weight: 400;
+}
+.section__one__form .description h2 {
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  color: rgba(1, 1, 1, 0.459);
+  font-weight: 400;
+}
+
+/* section two */
+.section__two .title {
+  display: flex;
+  justify-content: center;
+}
+.section__two .title h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  border-bottom: 3px solid #45644c;
+  padding-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.568);
+}
+/* custom and overwrite bootstrap */
+.nav {
+  flex-wrap: nowrap !important;
+}
+.tab-link {
+  text-align: center;
+  padding: 0.5rem 2rem;
+}
+.tab-link h3 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.tab-link span {
+  font-size: 1.5rem;
+}
+.nav-link {
+  background: #f2f2f2;
+  color: #404040;
+}
+.nav-link:hover {
+  color: #45644c;
+  background: #45644c23;
+}
+.nav-link.active {
+  background: #45644c !important;
+  color: #fff !important;
+  position: relative;
+}
+.nav-link.active::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  background-color: #45644c;
+  transform: translate(-50%, 0) rotate(45deg);
+  bottom: -0.7rem;
+  z-index: -1;
+  left: 50%;
+}
+.nav-tabs .nav-link {
+  border: none !important;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: none !important;
+}
+.nav-tabs li {
+  flex: 1;
+}
+.tab-pane {
+  padding: 2.5rem 0;
+}
+.tab-content .tab1 img {
+  width: 100%;
+  object-fit: cover;
+}
+.google-form {
+  width: 60rem;
+  height: 110rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .google-form {
+    width: 100%;
+  }
+  .section__one {
+    padding: 3rem 0rem 0rem 0rem;
+  }
+  .section__one__form .calendar {
+    width: 12rem;
+    height: 10rem;
+  }
+  .section__one__form .clock {
+    width: 9rem;
+    height: 9rem;
+    bottom: 1rem;
+    right: -0.5rem;
+  }
+  .section__one__form {
+    padding: 4rem 0;
+    gap: 2rem;
+  }
+  .section__one__form .description h2 {
+    margin-top: 0.5rem;
+  }
+  .section__one__form .form__right {
+    width: 100%;
+  }
+  .nav-tabs .nav-link {
+    height: 100%;
+  }
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .google-form {
+    height: 105rem;
+  }
+  .section__one {
+    padding: 4rem 0rem 0rem 0rem;
+  }
+  .section__one__form .calendar {
+    width: 10rem;
+    height: 8rem;
+  }
+  .section__one__form .clock {
+    width: 8rem;
+    height: 8rem;
+    bottom: 2rem;
+  }
+  .section__one__form {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .tab-link {
+    padding: 0.5rem 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .section__one__form .description h3,
+  .section__one__form .description h2 {
+    font-size: 2.8rem;
+  }
+  .section__one__form {
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 42.5%;
+  }
 }
