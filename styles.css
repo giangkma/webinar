@@ -47,6 +47,10 @@ video {
   text-align: center;
   position: relative;
   justify-content: space-between;
+  cursor: pointer;
+}
+.tabs li:hover {
+  background-color: #45644c29;
 }
 .tabs li.active::before {
   content: "";
@@ -189,7 +193,7 @@ video {
 }
 
 .google-form {
-  width: 60rem;
+  width: 100%;
   height: 100rem;
 }
 
