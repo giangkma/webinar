@@ -1,6 +1,6 @@
 $(".tab_content").hide();
 $(".tab_content:first").show();
-dd
+ddd
 $("ul.tabs li").click(function () {
   // we will no longer activate this tab once it has been activated.
   const isTabActived = $(this).attr("class") === "active";
